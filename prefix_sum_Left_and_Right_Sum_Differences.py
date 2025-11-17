@@ -19,7 +19,38 @@ Example 2:
 Input: nums = [1]
 Output: [0]
 Explanation: The array leftSum is [0] and the array rightSum is [0].
-The array answer is [|0 - 0|] = [0].'''
+The array answer is [|0 - 0|] = [0].
+⭐ Compute for each index
+i = 0
+
+nums[:0] → [] → left = 0
+nums[1:] → [4, 8, 3] → right = 15
+
+difference = |15 - 0| = 15
+
+i = 1
+
+nums[:1] → [10] → left = 10
+nums[2:] → [8, 3] → right = 11
+
+difference = |11 - 10| = 1
+
+i = 2
+
+nums[:2] → [10, 4] → left = 14
+nums[3:] → [3] → right = 3
+
+difference = |3 - 14| = 11
+
+i = 3
+
+nums[:3] → [10, 4, 8] → left = 22
+nums[4:] → [] → right = 0
+
+difference = |0 - 22| = 22
+
+✅ Final Output
+[15, 1, 11, 22]'''
 
 #code
 =================
