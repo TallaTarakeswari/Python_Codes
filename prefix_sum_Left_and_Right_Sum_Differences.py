@@ -41,3 +41,16 @@ class Solution:
         for i in range(0,len(nums)):
             final[i]=abs(left_sum[i]-right_sum[i])
         return(final)
+
+
+#using One loop
+==============================
+class Solution:
+    def leftRightDifference(self, nums: List[int]) -> List[int]:
+        ans=[]
+        for i in range(len(nums)):
+            left=sum(nums[:i])
+            right=sum(nums[i+1:])
+            ans.append(abs(right-left))
+        return ans    
+    
