@@ -15,37 +15,17 @@ Explanation: No subarray with sum = 5 is present in arr[].'''
 Code
 ===========
 class Solution:
-    def longestSubarray(self, arr, k):  
-        # Initialize the running prefix sum
-        prefix_sum = 0
-
-        # Dictionary to store the earliest index where a given prefix_sum occurred
-        # Initialize with {0: -1} to handle subarrays starting from index 0
-        prefix_map = {0: -1}
-
-        # List to store lengths of subarrays that sum to k (we’ll take max later)
-        results = [0]
-
-        # Traverse the array
-        for i, num in enumerate(arr):
-            # Update prefix sum up to the current index
-            prefix_sum += num
-
-            # Case 1: If the entire subarray [0..i] itself sums to k
-            if prefix_sum == k:
-                results.append(i + 1)  # length = i - 0 + 1 = i + 1
-
-            # Case 2: Check if there exists a previous prefix sum 
-            # such that current_sum - previous_sum = k
-            # That means subarray (previous_index+1 .. i) sums to k
-            if (prefix_sum - k) in prefix_map:
-                start = prefix_map[prefix_sum - k] + 1  # start index of subarray
-                results.append(i - start + 1)  # length of that subarray
-
-            # Case 3: Store the current prefix_sum with its index
-            # Only store if it hasn’t been stored before (keep the earliest occurrence)
-            if prefix_sum not in prefix_map:
-                prefix_map[prefix_sum] = i
-
-        # Return the maximum length of all found subarrays
-        return max(results)
+    def longestSubarray(self, arr, k):
+        prefix_sum=0
+        seen={0:0}
+        results=[0]
+        for i in range(1,len(arr)+1):
+            prefix_sum +=arr[i-1]
+            if (prefix_sum-k) in seen:
+                results.append(i-seen[(prefix_sum-k)])
+            if prefix_sum not in seen:
+                seen[prefix_sum]=i
+        return(max(results))
+        
+        # code here
+    
