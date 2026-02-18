@@ -1,3 +1,21 @@
+'''🧠 Correct Two Pointer Thinking
+
+Since array is sorted:
+
+Case 1:
+
+If sum < target
+👉 We need bigger sum
+👉 Move left pointer forward
+
+Case 2:
+
+If sum > target
+👉 We need smaller sum
+👉 Move right pointer backward'''
+
+
+
 arr = [1, 2, 4, 6, 8, 10]
 target = 10
 
