@@ -18,4 +18,14 @@ print(vec_1+vec_2) #vector addition
 print(vec_1-vec_2) #vector subtraction
 print(vec_1+vec_3) # getting error due to diffent dimentions
 
+#Row and Column addition
+
+import numpy as np
+v= np.array([[4,5,6]]) # row vector
+w = np.array([[10,20,30]]).T # column vector
+print(v)
+print(w)
+print(v+w)
+
+
 
