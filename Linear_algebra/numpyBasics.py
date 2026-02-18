@@ -10,3 +10,12 @@ print(arr_1d.shape)
 print(arr_row.shape)
 print(arr_col.shape)
 
+
+vec_1 = np.array([4,5,6])
+vec_2 = np.array([10,20,30])
+vec_3 = np.array([1,2])
+print(vec_1+vec_2) #vector addition
+print(vec_1-vec_2) #vector subtraction
+print(vec_1+vec_3) # getting error due to diffent dimentions
+
+
