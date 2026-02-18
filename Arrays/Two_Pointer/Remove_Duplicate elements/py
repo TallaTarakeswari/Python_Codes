@@ -1,0 +1,17 @@
+''' the below is not optimized one because del arr[last] requires O(n) so again it become O(n^2)
+'''
+arr = [1,1,2,2,3,3,3,4]
+first=0
+last=0
+
+while last>=first:
+  if last==len(arr):
+    break
+  elif arr[first]==arr[last] and first==last:
+    last +=1
+    
+  elif arr[first]==arr[last] and last!=first:
+    del arr[last]
+  elif arr[first]!=arr[last]:
+    first +=1
+print(arr)
