@@ -1,4 +1,19 @@
-#My approch
+#chatgpt and best approch
+
+arr = [0,1,0,3,12]
+
+write =0
+
+for read in range(len(arr)):
+  if arr[read]!=0:
+    arr[read],arr[write]=arr[write],arr[read]
+    write+=1 
+print(arr)
+
+
+
+
+#My approch missed handling arr[left]!=0
 
 arr = [0,1,0,3,12]
 
@@ -14,5 +29,7 @@ while right<len(arr):
   elif arr[left]==0 and arr[right]==0:
     right +=1
   print(arr)
+
+
   
   
