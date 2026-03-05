@@ -28,4 +28,24 @@ print(w)
 print(v+w)
 
 
+#scalar multiplication
+
+import numpy as np
+v= np.array([[4,5,6]]) # row vector
+m=2*v 
+print(m)
+
+import numpy as np
+s = 2
+v = np.array([3,6])
+print(s+v)
+
+# addition with broadcasting
+
+import numpy as np
+v = np.array([[1,2,3]]).T # col vector
+w = np.array([[10,20]])   # row vector
+v + w # addition with broadcasting
+print(v+w)
+
 
